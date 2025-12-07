@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && ls -R dist",
+    "build": "vite build; echo \"--- dist directory contents ---\"; find dist -type f | sed -e 's/^/FILE: /'",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -26,3 +26,4 @@
     "vite": "^7.2.4"
   }
 }
+
